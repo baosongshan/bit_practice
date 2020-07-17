@@ -5,6 +5,7 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<stdbool.h>
+#include<memory.h>
 #include<vld.h>  //用于内存泄漏的检测
 
 #define ElemType int
