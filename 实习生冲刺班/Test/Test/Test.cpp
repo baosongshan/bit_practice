@@ -3,6 +3,24 @@
 #include<assert.h>
 #include<vld.h>
 
+void SeqListEraseAll(int *ar, int *n, int key)
+{
+
+}
+
+void main()
+{
+	int ar[] = {1,3,5,5,5,5,7,9,5,5,8,0,2};
+	int n = sizeof(ar) / sizeof(ar[0]);
+	int size = n;
+	SeqListEraseAll(ar, &size, 5);
+	for(int i=0; i<size; ++i)
+		printf("%d ",ar[i]);
+	printf("\n");
+}
+
+
+/*
 typedef struct ListNode
 {
 	int data;       //Êý¾ÝÓò

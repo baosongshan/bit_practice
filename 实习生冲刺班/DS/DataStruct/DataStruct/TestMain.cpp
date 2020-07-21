@@ -1,12 +1,19 @@
 //#include"seqlist.h"
-#include"slist.h"
+//#include"slist.h"
+#include"sclist.h"
 
 int main()
 {
 	//SeqList list;
 	//SeqListInit(&list);
 
-	SList list;
+	//SList list;
+	//SListInit(&list);
+	//SListNode *p = NULL;
+
+	SCList list;
+	SCListInit(&list);
+	SCListNode *p = NULL;
 
 	ElemType item;
 	int pos;
@@ -36,7 +43,7 @@ int main()
 			printf("请输入要插入的数据<以-1结束>:");
 			while(scanf("%d", &item), item!=-1)
 			{
-				//SeqListPushBack(&list, item);
+				SCListPushBack(&list, item);
 			}
 			printf("头部插入数据成功......\n");
 			break;
@@ -44,19 +51,19 @@ int main()
 			printf("请输入要插入的数据<以-1结束>:");
 			while(scanf("%d", &item), item!=-1)
 			{
-				//SeqListPushFront(&list, item);
+				//SListPushFront(&list, item);
 			}
 			printf("尾部插入数据成功......\n");
 			break;
 		case 3:
-			//SeqListShow(&list);
+			SCListShow(list);
 			break;
 		case 4:
-			//SeqListPopBack(&list);
+			//SListPopBack(&list);
 			printf("尾部删除数据成功......\n");
 			break;
 		case 5:
-			//SeqListPopFront(&list);
+			//SListPopFront(&list);
 			printf("头部删除数据成功......\n");
 			break;
 		case 6:
@@ -73,8 +80,8 @@ int main()
 		case 7:
 			printf("请输入要插入的元素:>");
 			scanf("%d", &item);
-			//SeqListSort(&list);
-			//SeqListInsertByVal(&list, item);
+			//SListSort(&list);
+			//SListInsertByVal(&list, item);
 			printf("插入数据成功.......\n");
 			break;
 		case 8:
@@ -86,34 +93,45 @@ int main()
 		case 9:
 			printf("请输入要删除的元素:>");
 			scanf("%d", &item);
-			//SeqListEraseByVal(&list, item);
+			//SListEraseByVal(&list, item);
 			printf("删除数据成功.......\n");
 			break;
 		case 10:
 			printf("请输入要查找的关键值:>");
 			scanf("%d", &item);
-			//pos = SeqListFind(&list, item);
-			if(pos == -1)
+			//p = SListFind(list, item);
+			if(p == NULL)
 				printf("数据查找失败.\n");
 			else
 				printf("数据查找成功.\n");
 			break;
 		case 11:
-			//printf("SeqList Length = %d\n", SeqListLength(&list));
+			//printf("SList Length = %d\n", SListLength(list));
 			break;
 		case 12:
 			//printf("SeqList Capacity = %d\n", SeqListCapacity(&list));
 			break;
 		case 13:
-			//SeqListSort(&list);
+			//SListSort(&list);
 			printf("顺序表排序成功......\n");
 			break;
 		case 14:
-			//SeqListReverse(&list);
+			//SListReverse(&list);
 			printf("转置完成.\n");
 			break;
 		case 15:
-			//SeqListClear(&list);
+			//SListClear(&list);
+			break;
+		case 16:
+			//printf("表头元素为: %d\n", SListFront(list));
+			break;
+		case 17:
+			//printf("表尾元素为: %d\n", SListBack(list));
+			break;
+		case 19:
+			printf("请输入要删除的元素:>");
+			scanf("%d", &item);
+			//SListEraseAll(&list, item);
 			break;
 		default:
 			printf("命令出错,请重新输入......\n");
@@ -123,6 +141,6 @@ int main()
 		system("cls");
 	}
 
-	//SeqListDestroy(&list);
+	//SListDestroy(&list); //SListClear();
 	return 0;
 }

@@ -35,6 +35,11 @@ int SeqListFind(SeqList *plist, ElemType key);
 
 void SeqListReverse(SeqList *plist);
 
+ElemType SeqListFront(SeqList *plist);
+ElemType SeqListBack(SeqList *plist);
+int      SeqListFind_Binary(SeqList *plist, ElemType key);
+void     SeqListEraseAll(SeqList *plist, ElemType key);
+
 /////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -289,6 +294,51 @@ void SeqListReverse(SeqList *plist)
 		start++;
 		end--;
 	}
+}
+
+ElemType SeqListFront(SeqList *plist)
+{
+	assert(plist != NULL);
+	if(IsEmpty(plist))
+	{
+		printf("顺序表已空,不能取表头数据.\n");
+		return;
+	}
+	return plist->base[0];
+}
+ElemType SeqListBack(SeqList *plist)
+{
+	assert(plist != NULL);
+	if(IsEmpty(plist))
+	{
+		printf("顺序表已空,不能取表尾数据.\n");
+		return;
+	}
+	return plist->base[plist->size-1];
+}
+int      SeqListFind_Binary(SeqList *plist,  ElemType key)
+{
+	assert(plist != NULL);
+	if(IsEmpty(plist))
+		return -1;
+	int start = 0;
+	int end = plist->size-1;
+	int mid;
+	while(start <= end)
+	{
+		mid = (start + end) / 2;
+		if(key == plist->base[mid])
+			return mid;
+		else if(key < plist->base[mid])
+			end = mid - 1;
+		else
+			start = mid + 1;
+	}
+	return -1;
+}
+void     SeqListEraseAll(SeqList *plist, ElemType key)
+{
+	//????????????????
 }
 
 #endif /* _SEQLIST_H_ */
