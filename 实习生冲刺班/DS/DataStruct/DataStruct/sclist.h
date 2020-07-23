@@ -16,7 +16,26 @@ void SCListInit(SCList *phead);
 void SCListPushBack(SCList *phead, ElemType x);
 void SCListShow(SCList phead);
 
+void SCListPushFront(SCList *phead, ElemType x);
 
+/*
+void SListPopBack(SList *phead);
+void SListPopFront(SList *phead);
+void SListShow(SList *phead);
+size_t SListLength(SList *phead);
+
+SListNode* SListFind(SList phead, ElemType key);
+void SListEraseByVal(SList *phead, ElemType key);
+void SListInsertByVal(SList *phead, ElemType key);
+void SListSort(SList *phead);
+
+ElemType SListFront(SList phead);
+ElemType SListBack(SList phead);
+void SListEraseAll(SList *phead, ElemType key); //同学们先自行完成
+void SListClear(SList *phead);
+void SListDestroy(SList *phead);
+void SListReverse(SList *phead);
+*/
 
 ///////////////////////////////////////////////////////////////
 void SCListInit(SCList *phead)
