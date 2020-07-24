@@ -1,8 +1,127 @@
 //#include"seqlist.h"
 //#include"slist.h"
 //#include"sclist.h"
-#include"dclist.h"
+//#include"dclist.h"
+//#include"stack.h"
+#include"queue.h"
 
+void main()
+{
+	CycleSeqQueue Q;
+	CycleSeqQueueInit(&Q);
+	CycleSeqQueueEn(&Q, 1);
+	CycleSeqQueueEn(&Q, 2);
+	CycleSeqQueueEn(&Q, 3);
+	CycleSeqQueueEn(&Q, 4);
+	CycleSeqQueueEn(&Q, 5);
+	CycleSeqQueueEn(&Q, 6);
+	CycleSeqQueueEn(&Q, 7);
+	CycleSeqQueueEn(&Q, 8);
+
+	CycleSeqQueueEn(&Q, 9);
+	CycleSeqQueueShow(&Q);
+
+	CycleSeqQueueDe(&Q);
+	CycleSeqQueueShow(&Q);
+	CycleSeqQueueEn(&Q, 9);
+	CycleSeqQueueShow(&Q);
+}
+
+/*
+void main()
+{
+	SeqQueue Q;
+	SeqQueueInit(&Q);
+	SeqQueueEn(&Q, 1);
+	SeqQueueEn(&Q, 2);
+	SeqQueueEn(&Q, 3);
+	SeqQueueEn(&Q, 4);
+	SeqQueueEn(&Q, 5);
+	SeqQueueEn(&Q, 6);
+	SeqQueueEn(&Q, 7);
+	SeqQueueEn(&Q, 8);
+	SeqQueueEn(&Q, 9);
+	SeqQueueShow(&Q);
+
+	SeqQueueDe(&Q);
+	SeqQueueShow(&Q);
+	printf("front = %d\n", SeqQueueFront(&Q));
+
+	SeqQueueEn(&Q, 9);
+}
+
+/*
+void main()
+{
+	LinkQueue Q;
+	LinkQueueInit(&Q);
+	LinkQueueEn(&Q, 1);
+	LinkQueueEn(&Q, 2);
+	LinkQueueEn(&Q, 3);
+	LinkQueueEn(&Q, 4);
+	LinkQueueEn(&Q, 5);
+	LinkQueueShow(&Q);
+	
+	int front_val;
+	while(!LinkQueueEmpty(&Q))
+	{
+		front_val = LinkQueueFront(&Q);
+		LinkQueueDe(&Q);
+		printf("%d ³ö¶Ó.\n", front_val);
+	}
+
+	LinkQueueDestroy(&Q);
+}
+
+/*
+void main()
+{
+	LinkStack st;
+	LinkStackInit(&st);
+
+	LinkStackPush(&st, 1);
+	LinkStackPush(&st, 2);
+	LinkStackPush(&st, 3);
+	LinkStackPush(&st, 4);
+	LinkStackPush(&st, 5);
+	LinkStackShow(&st);
+
+	LinkStackPop(&st);
+	LinkStackPop(&st);
+	LinkStackShow(&st);
+
+	printf("top = %d\n", LinkStackTop(&st));
+	printf("size = %d\n", LinkStackSize(&st));
+
+	LinkStackDestroy(&st);
+
+}
+
+/*
+void main()
+{
+	SeqStack st;
+	SeqStackInit(&st);
+
+	SeqStackPush(&st, 1);
+	SeqStackPush(&st, 2);
+	SeqStackPush(&st, 3);
+	SeqStackPush(&st, 4);
+	SeqStackPush(&st, 5);
+	SeqStackShow(&st);
+
+	int top_val;
+	while(!SeqStackIsEmpty(&st))
+	{
+		//top_val = SeqStackTop(&st);
+		SeqStackTop(&st, &top_val);
+		SeqStackPop(&st);
+		printf("%d ³öÕ».\n", top_val);
+	}
+	SeqStackDestroy(&st);
+}
+
+/*
 int main()
 {
 	//SeqList list;
@@ -149,3 +268,4 @@ int main()
 	DCListDestroy(&list);
 	return 0;
 }
+*/
