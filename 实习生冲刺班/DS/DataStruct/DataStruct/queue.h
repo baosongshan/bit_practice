@@ -2,6 +2,7 @@
 #define  _QUEUE_H_
 
 #include"Common.h"
+
 //а╢й╫╤сап
 typedef struct LinkQueueNode
 {

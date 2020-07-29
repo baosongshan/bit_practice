@@ -3,8 +3,40 @@
 //#include"sclist.h"
 //#include"dclist.h"
 //#include"stack.h"
-#include"queue.h"
+//#include"queue.h"
+#include"bintree.h"
 
+//ABC##DE##F##G#H##
+
+void main()
+{
+	BinTree bt;
+	BinTreeInit(&bt);
+	BinTreeCreate(&bt);
+	
+	//先序遍历
+	printf("VLR: ");
+	BinTreeVLR(bt);
+	printf("\n");
+	//中序遍历
+	printf("LVR: ");
+	BinTreeLVR(bt);
+	printf("\n");
+	//后序遍历
+	printf("LRV: ");
+	BinTreeLRV(bt);
+	printf("\n");
+	//层次遍历
+	printf("Level: ");
+	BinTreeLevel(bt);
+	printf("\n");
+
+	printf("size = %d\n", Size(bt));
+	printf("height = %d\n", Height(bt));
+}
+
+
+/*
 void main()
 {
 	CycleSeqQueue Q;
