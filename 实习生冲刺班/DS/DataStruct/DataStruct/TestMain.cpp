@@ -4,8 +4,38 @@
 //#include"dclist.h"
 //#include"stack.h"
 //#include"queue.h"
-#include"bintree.h"
+//#include"bintree.h"
 
+#include"heap.h"
+
+void main()
+{
+	int ar[] = {27,15,19,18,28,34,65,49,25,37};
+	int n = sizeof(ar) / sizeof(ar[0]);
+	//MinHeap mhp(ar, n);
+}
+
+/*
+void main()
+{
+	int v = (0-1)/2;
+	int ar[] = {27,15,19,18,28,34,65,49,25,37};
+	int n = sizeof(ar) / sizeof(ar[0]);
+
+	MinHeap mhp;
+	HeapInit(&mhp);
+
+	for(int i=0; i<n; ++i)
+		HeapInsert(&mhp, ar[i]);
+
+	HeapShow(&mhp);
+
+	HeapInsert(&mhp, 17);
+	HeapShow(&mhp);
+}
+
+
+/*
 //ABC##DE##F##G#H##
 
 void main()
