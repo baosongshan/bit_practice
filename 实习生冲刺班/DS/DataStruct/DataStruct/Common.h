@@ -7,6 +7,7 @@
 #include<stdbool.h>
 #include<string.h>
 #include<memory.h>
+#include<time.h>
 #include<vld.h>  //用于内存泄漏的检测
 
 #define ElemType int

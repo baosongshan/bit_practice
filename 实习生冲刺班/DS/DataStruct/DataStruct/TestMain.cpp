@@ -6,9 +6,48 @@
 //#include"queue.h"
 //#include"bintree.h"
 //#include"heap.h"
+//#include"bst.h"
 
-#include"bst.h"
+#include"sort.h"
 
+
+void main()
+{
+	int ar[] = {49, 38, 65, 97, 76, 13,27, 49};
+	int n = sizeof(ar) / sizeof(ar[0]);
+	PrintArray(ar, 0, n);
+	TestSort(ar, 0, n);
+	PrintArray(ar, 0, n);
+	TestSortEfficiency();
+}
+
+
+/*
+void main()
+{
+	int ar[] = {0, 49, 38, 65, 97, 76, 13,27, 49};
+	int n = sizeof(ar) / sizeof(ar[0]);
+	PrintArray(ar, 1, n);
+	TestSort(ar, 1, n);
+	PrintArray(ar, 1, n);
+}
+
+/*
+void main()
+{
+	int ar[] = {49, 38, 65, 97, 76, 13,27, 49};
+	int n = sizeof(ar) / sizeof(ar[0]);
+	PrintArray(ar, 0, n);
+	TestSort(ar, 0, n);
+	PrintArray(ar, 0, n);
+	TestSortEfficiency();
+}
+
+
+
+
+
+/*
 void main()
 {
 	int ar[] = {27,15,19,18,1,28,34,65,100,49,25,37};
