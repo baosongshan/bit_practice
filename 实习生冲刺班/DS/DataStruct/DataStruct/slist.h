@@ -13,6 +13,7 @@ typedef SListNode* SList;
 
 
 void SListInit(SList *phead);
+bool SListEmpty(SList *phead);
 void SListPushBack(SList *phead, ElemType x);
 void SListPushFront(SList *phead, ElemType x);
 void SListPopBack(SList *phead);
@@ -37,6 +38,11 @@ void SListInit(SList *phead)
 {
 	assert(phead != NULL);
 	*phead = NULL;
+}
+
+bool SListEmpty(SList *phead)
+{
+	return *phead == NULL;
 }
 
 void SListPushBack(SList *phead, ElemType x)

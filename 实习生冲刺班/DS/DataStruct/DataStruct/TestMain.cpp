@@ -7,13 +7,30 @@
 //#include"bintree.h"
 //#include"heap.h"
 //#include"bst.h"
+//#include"sort.h"
 
-#include"sort.h"
-
+#include"hash.h"
 
 void main()
 {
+	int ar[] = {1, 8, 15,3,9};
+	int n = sizeof(ar) / sizeof(ar[0]);
+	HashTable ht;
+	HashInit(ht);
+
+	for(int i=0; i<n; ++i)
+		HashInsert(ht, ar[i]);
+
+	HashShow(ht);
+}
+
+/*
+void main()
+{
 	int ar[] = {49, 38, 65, 97, 76, 13,27, 49};
+	//int ar[] = {6, 1, 2, 7, 9, 3, 4, 5, 10, 8};
+
+	//int ar[] = {278, 109, 63, 930, 589, 184, 505, 269, 8, 83};
 	int n = sizeof(ar) / sizeof(ar[0]);
 	PrintArray(ar, 0, n);
 	TestSort(ar, 0, n);
