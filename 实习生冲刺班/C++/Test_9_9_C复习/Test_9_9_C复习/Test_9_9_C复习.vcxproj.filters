@@ -15,8 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Max.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Min.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="Test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Head.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Min.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Max.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
