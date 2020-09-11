@@ -58,15 +58,15 @@ bool _Inc(SeqList *plist, size_t new_capacity)
 
 	assert(plist != NULL && new_capacity > plist->capacity);
 	
-	ElemType *new_base = (ElemType*)malloc(sizeof(ElemType) * new_capacity); //realloc
+	ElemType *new_base = (ElemType*)malloc(sizeof(ElemType) * new_capacity); //realloc 重新开辟空间
 	if(new_base == NULL)
 		return false;
 	
-	memcpy(new_base, plist->base, sizeof(ElemType)*(plist->capacity));
+	memcpy(new_base, plist->base, sizeof(ElemType)*(plist->capacity)); // 拷贝原始数据
 
-	free(plist->base);
+	free(plist->base);  //释放旧空间
 
-	plist->base = new_base;
+	plist->base = new_base;  // 更改空间指向和容量
 	plist->capacity = new_capacity;
 	return true;
 }
